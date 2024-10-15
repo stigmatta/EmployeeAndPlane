@@ -6,17 +6,14 @@ namespace EmployeeClass
     internal class Employee
     {
         static string emailPattern = @"^\S+@\S+\.\S+$";
-        private string name;
-
-
-
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-
         private DateTime birthday;
+        private string? phoneNumber;
+        private string? email;
+
+        public string Name { get; set; }
+
+        public string? Position { get; set; }
+
 
         public DateTime Birthday
         {
@@ -28,8 +25,6 @@ namespace EmployeeClass
             }
         }
 
-        private string? phoneNumber;
-
         public string? PhoneNumber
         {
             get { return phoneNumber; }
@@ -40,7 +35,6 @@ namespace EmployeeClass
             }
         }
 
-        private string? email;
 
         public string? Email
         {
@@ -52,17 +46,6 @@ namespace EmployeeClass
             }
         }
 
-        private string? position;
-
-        public string? Position
-        {
-            get { return position; }
-            set
-            {
-                if (!string.IsNullOrEmpty(value))
-                    position = value;
-            }
-        }
 
         public Employee()
         {
